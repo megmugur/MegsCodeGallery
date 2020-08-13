@@ -4,7 +4,7 @@ from PySide2 import QtGui
 from PySide2 import QtCore
 
 class InviteDialog(QtWidgets.QDialog):
-    def __init__(self, parent = None):        # This is the "constructor". What does ["parent" = None] do?
+    def __init__(self, parent=None):        # Constructor
         super(InviteDialog, self).__init__(parent)
 
         self.overallLayout = QtWidgets.QVBoxLayout()
@@ -41,8 +41,10 @@ class InviteDialog(QtWidgets.QDialog):
 
         #          ----------------- Closing Widget ------------------------
         self.closingLabel = QtWidgets.QLabel()
+        self.backLabel = QtWidgets.QLabel("Back")
         self.closingLayout = QtWidgets.QVBoxLayout()
         self.closingLayout.addWidget(self.closingLabel)
+        self.closingLayout.addWidget(self.backLabel)
         self.closingWidget.setLayout(self.closingLayout)
         #          --------------------------------------------------------
 
@@ -54,8 +56,7 @@ class InviteDialog(QtWidgets.QDialog):
 
     def yesBtnFtn(self):
         self.closingLabel.setText('See you then.')
-        self.closingLabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.overallWidget.setCurrentWidget(self.closingWidget)
+        self.closingTemplate()
 
     def noBtnFtn(self):
         print("Okay.")
@@ -69,10 +70,22 @@ class InviteDialog(QtWidgets.QDialog):
         self.closingLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.overallWidget.setCurrentWidget(self.closingWidget)
 
+    def closingTemplate(self):
+        self.closingLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.overallWidget.setCurrentWidget(self.closingWidget)
+        self.rsvpNoButton.pressed.connect(self.noBtnFtn)
+        # if (QtCore.QObject.connect(self.backLabel, QtCore.SIGNAL(clicked()), QtCore.SLOT(self.goBack()))):
+        #     self.goBack()
+
+
+
+    def goBack(self):
+        print("go back")
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     inviteDialog = InviteDialog()   # creating an instance of class InviteDialog, running constructor
-    inviteDialog.exec_()            # why the underscore?
+    inviteDialog.exec_()
 
 
 
