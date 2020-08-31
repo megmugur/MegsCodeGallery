@@ -1,2 +1,2 @@
 # MegsCodeGallery
-"My experiments with code"
+My experiments with code
