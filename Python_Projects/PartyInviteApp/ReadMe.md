@@ -7,4 +7,4 @@ Image credits: https://depositphotos.com/111556890/stock-photo-friendly-party-wi
 
 Here's a snapshot of the app:
 
-![Party Invite App Screenshot]()
+![Party Invite App Screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/Python_Projects/PartyInviteApp/Invite_Screenshot.jpg)
