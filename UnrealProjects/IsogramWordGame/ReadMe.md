@@ -8,4 +8,4 @@ Bull count is the number of guessed characters that are correct and in the corre
 Cow count is the number of guessed characters that are correct but in the wrong position.
 
 Here's a preview of the game in Unreal:
-[Game Screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/UnrealProjects/IsogramWordGame/GameScreenshot.jpg)
+![Game Screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/UnrealProjects/IsogramWordGame/GameScreenshot.jpg)
