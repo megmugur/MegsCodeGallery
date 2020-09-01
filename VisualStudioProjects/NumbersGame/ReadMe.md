@@ -6,4 +6,4 @@ There are 3 levels of difficulty (in increasing order).
 
 Here's a screenshot of the game:
 
-![TripleX game screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/VS_Projects/NumbersGame/TripleXScreenshot.jpg)
+![TripleX game screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/VisualStudioProjects/NumbersGame/TripleXScreenshot.jpg)

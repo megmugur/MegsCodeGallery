@@ -7,4 +7,4 @@ Naming convention used: Camel Case
 
 Here's a preview of the application: 
 
-![Geography Quiz](https://github.com/megmugur/MegsCodeGallery/blob/master/Qt_Projects/GeographyQuizRestApi/QuizScreenshot.jpg)
+![Geography Quiz](https://github.com/megmugur/MegsCodeGallery/blob/master/QtProjects/GeographyQuizRestApi/QuizScreenshot.jpg)

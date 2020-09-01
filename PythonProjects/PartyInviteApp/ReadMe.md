@@ -3,6 +3,6 @@ Displays a welcome message. Provides three rsvp options to the user : yes, no an
 
 Here's a snapshot of the app:
 
-![Party Invite App Screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/Python_Projects/PartyInviteApp/Invite_Screenshot.jpg)
+![Party Invite App Screenshot](https://github.com/megmugur/MegsCodeGallery/blob/master/PythonProjects/PartyInviteApp/InviteScreenshot.jpg)
 
 Image credits: https://depositphotos.com/111556890/stock-photo-friendly-party-with-hot-pizza.html
