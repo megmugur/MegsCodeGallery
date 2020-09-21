@@ -1,7 +1,6 @@
 import sys
-from PySide2 import QtWidgets
-from PySide2 import QtGui
-from PySide2 import QtCore
+from PySide2 import QtWidgets, QtGui, QtCore
+
 
 class InviteDialog(QtWidgets.QDialog):
     """This class creates all the necessary UI for the invite dialog.

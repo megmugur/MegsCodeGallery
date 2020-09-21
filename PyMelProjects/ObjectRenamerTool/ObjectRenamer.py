@@ -2,7 +2,6 @@
 a list of the selected objects, sorted by their types,
 and a textbox next to each object, for the user to type the desired new name.
 The textbox is populated with suggestions, based on the object type, and the user can edit it.
-
 TODO - Future enhancements:
 1. indicate which textbox needs editing, to fix the displayed error.
 2. When user hits Undo once after using the tool, the entire list of names should be reverted at once.
@@ -40,7 +39,8 @@ class RenamerDialog(QtWidgets.QDialog):
         """This method creates a list of all selected dag objects, and checks if selection is empty.
         If it is empty, displays an error message. If not, it goes ahead, and sets up the object lists' display.
         It also creates objects of the CategorizeObjects and NewNameOperations classes, which will be used later."""
-        self.all_selected_objects = pm.ls(dag=True, sl=True, head=1)
+        self.all_selected_objects = pm.ls(dag=True, sl=True, long=True)
+        print("All objects: ", self.all_selected_objects)
 
         if not self.all_selected_objects:
             no_selection_label = QtWidgets.QLabel("Nothing selected.")
@@ -51,6 +51,7 @@ class RenamerDialog(QtWidgets.QDialog):
         self.new_name_object = NewNameOperations.NewNameOperations()
 
         self.populate_window()
+
 
     def populate_window(self):
         """ Calls the methods that create and display the UI widgets in the popup window"""
@@ -80,6 +81,7 @@ class RenamerDialog(QtWidgets.QDialog):
         self.error_label = QtWidgets.QLabel()
 
         self.rename_button = QtWidgets.QPushButton("Rename and close")
+
 
     def display_heading_labels(self):
         """ Encases the labels for 'Current name' and 'New name' list-headings in a QHBox layout, and adds
@@ -141,7 +143,7 @@ class RenamerDialog(QtWidgets.QDialog):
             category_wise_grid.setLayout(self.category_wise_grid_layout)
             self.list_grid_layout.addWidget(category_wise_grid, self.row_index, 0)
             self.row_index += 1
-            print(object_type, objects_list)
+            # print(object_type, objects_list)
 
     def populate_each_category(self, all_objects_in_category, category):
         """ For each object in the list, creates two textboxes: one for the current name, and one for the desired new
